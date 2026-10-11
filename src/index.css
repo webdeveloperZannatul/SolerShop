@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand color palette - strictly only these colours */
+  --color-logo-green: #4F8A55;
+  --color-deep-forest: #2E5E3A;
+  --color-logo-blue: #4A7FB0;
+  --color-morning-sky: #E3EEF6;
+  --color-sun-yellow: #E9B64A;
+  --color-soft-sun: #F8E9BE;
+  --color-sage-olive: #8FAD6B;
+  --color-pale-sage: #E6EDD6;
+  --color-soil-brown: #6B4A32;
+  --color-terracotta: #B8643F;
+  --color-clay-sand: #D9BE96;
+  --color-warm-white: #FFFDF8;
+  --color-cream: #F6F1E4;
+  --color-dark-bark: #3A2A1E;
+
+  /* Brown-tinted shadows strictly using Dark Bark / Soil Brown */
+  --shadow-brown-sm: 0 2px 8px -1px rgba(58, 42, 30, 0.06);
+  --shadow-brown-md: 0 6px 20px -3px rgba(58, 42, 30, 0.08);
+  --shadow-brown-lg: 0 14px 34px -4px rgba(58, 42, 30, 0.11);
+  --shadow-brown-inner: inset 0 2px 4px rgba(58, 42, 30, 0.05);
+
+  /* Fonts */
+  --font-heading: 'Nunito', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-warm-white);
+  color: var(--color-dark-bark);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--color-dark-bark);
+}
+
+/* Custom rounded corners: 12px to 20px */
+.rounded-solar-sm {
+  border-radius: 12px;
+}
+.rounded-solar {
+  border-radius: 16px;
+}
+.rounded-solar-lg {
+  border-radius: 20px;
+}
+
+/* Brown-tinted shadow utilities */
+.shadow-solar-sm {
+  box-shadow: var(--shadow-brown-sm);
+}
+.shadow-solar-md {
+  box-shadow: var(--shadow-brown-md);
+}
+.shadow-solar-lg {
+  box-shadow: var(--shadow-brown-lg);
+}
+
+/* Clay sand borders */
+.border-solar {
+  border: 1px solid var(--color-clay-sand);
+}
+
+/* Subtle smooth fade in animation */
+@keyframes solarFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-solar-fade {
+  animation: solarFadeIn 0.35s ease-out forwards;
+}
+
+/* Focus styles strictly using Clay Sand / Logo Green */
+*:focus-visible {
+  outline: 2px solid var(--color-logo-green);
+  outline-offset: 2px;
+}

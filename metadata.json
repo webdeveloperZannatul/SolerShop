@@ -1,0 +1,6 @@
+{
+  "name": "Solarshop - Natural Solar Energy",
+  "description": "Brand-led, warm, and trustworthy solar energy company website for Solarshop.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
